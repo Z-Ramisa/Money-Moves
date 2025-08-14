@@ -45,7 +45,6 @@ const App: React.FC = () => {
 
   return (
     <div style={{ backgroundColor: bgColor, color: textColor, minHeight: "100vh" }}>
-    
 <header
   style={{
     backgroundColor: "#28a745",
@@ -53,30 +52,24 @@ const App: React.FC = () => {
     padding: "1rem",
     display: "flex",
     alignItems: "center",
-    position: "relative", 
+    justifyContent: "space-between", 
   }}
 >
- 
-  <div className="flex flex-col">
-    <h1 className="text-4xl font-bold font-[Comic Sans] text-green-900 dark:text-green-900 decoration-blue-400 decoration-4">
-      Money Moves
-    </h1>
-    <h2 className="text-xl font-semibold font-[Tahoma] text-gray-700 dark:text-gray-300">
-      Track your everyday expenses
-    </h2>
+  <div className="flex items-center gap-4">
+   
+   <FaCoins className="text-yellow-400 text-5xl sm:text-6xl md:text-7xl animate-bounce" />
+
+
+   
+    <div className="flex flex-col">
+      <h1 className="text-4xl font-bold font-[Comic Sans] text-green-900 dark:text-green-900 decoration-blue-400 decoration-4">
+        Money Moves
+      </h1>
+      <h2 className="text-xl font-semibold font-[Tahoma] text-gray-700 dark:text-gray-300">
+        Track your everyday expenses
+      </h2>
+    </div>
   </div>
-
-
-  <div
-    style={{
-      position: "absolute",
-      left: "50%",
-      transform: "translateX(-50%)",
-    }}
-  >
-    <FaCoins className="text-yellow-400 text-5xl animate-bounce" />
-  </div>
-
 
   <button
     onClick={() => setDarkMode(!darkMode)}
@@ -84,7 +77,6 @@ const App: React.FC = () => {
       fontSize: "1.5rem",
       padding: "0.5rem",
       borderRadius: "0.25rem",
-      marginLeft: "auto",
     }}
   >
     {darkMode ? <FaSun /> : <FaMoon />}
@@ -95,6 +87,7 @@ const App: React.FC = () => {
 
       <div style={{ textAlign: "center", margin: "1rem 0" }}>
         <p style={{ fontSize: "1.25rem", fontWeight: "600" }}>Net Balance:</p>
+        
         <span style={{ fontSize: "2rem", fontWeight: "bold", color: netBalance >= 0 ? "#28a745" : "#dc3545" }}>
           ৳{netBalance}
         </span>
