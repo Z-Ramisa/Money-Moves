@@ -1,0 +1,53 @@
+
+@import "tailwindcss";
+
+/* @tailwind base;
+
+@tailwind components;
+@tailwind utilities; */
+
+.light-mode {
+  background-color: #f3f4f6; color: #000000; 
+}
+
+.light-mode header {
+  background-color: #22c55e;   color: white;
+}
+
+
+.dark-mode {
+  background-color: #1f2937;color: #ffffff; 
+}
+
+.dark-mode header {
+  background-color: #166534;color: white;
+}
+
+
+.light-mode .transaction {
+  background-color: white;  color: black;
+}
+
+.dark-mode .transaction {
+  background-color: #374151;   color: white;
+}
+
+
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
